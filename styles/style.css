@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f3f5fc;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000;
+    padding-left: 2%;
+}
+
+.header-image {
+    width: 12%;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    gap: 20px;
+}
+
+.section__container-interfaz-input-output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 90%;
+}
+
+.section__container-interfaz-input,
+.section__container-interfaz-output {
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+    width: 50%;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section__container-interfaz-input {
+    background-color: #000;
+    color: #fdfdfde3;
+}
+
+.section__container-interfaz-output {
+    background-color: #ffffff;
+}
+
+.section__container-interfaz-output-hidden,
+.section__container-btn-info-hidden {
+    display: none;
+}
+
+.container-textarea-input,
+.container-textarea-output {
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.textarea-input,
+.textarea-output {
+    overflow-y: hidden;
+    background: none;
+    border: none;
+    color: inherit;
+    resize: none;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    width: 100%;
+    height: auto;
+}
+
+.textarea-output {
+    color: #495057;
+    font-weight: 400;
+}
+
+.textarea-input:focus,
+.textarea-output:focus {
+    outline: none;
+}
+
+.buttons-input,
+.buttons-output {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background-color: inherit;
+    margin-top: 30px;
+}
+
+button {
+    font-family: "Noto Sans", sans-serif;
+    width: 100%;
+    font-weight: 300;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: translateY(5px);
+}
+
+.btn-encriptar,
+.btn-desencriptar {
+    color: #f4f4f4;
+    background-color: #ba0a0b;
+    border: none;
+}
+
+.btn-copiar,
+.btn-borrar {
+    background-color: #ffffff;
+    border: 1px solid rgba(7, 7, 7, 0.774);
+    color: #000;
+}
+
+.btn-copiar:hover,
+.btn-borrar:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.section__container-btn-info {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.btn-info {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    border: 2px solid #ba0a0b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0;
+}
+
+.btn-info:hover {
+    background-color: #ba0a0b;
+}
+
+.info-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.section__container-interfaz-imagen {
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.container-interfaz-imagen {
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 10px;
+}
+
+.container-imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-inicio {
+    width: 70%;
+}
+
+footer {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1921px) {
+    .section {
+        width: 90%;
+    }
+
+    .section__container-interfaz-input-output {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1367px) {
+    .section {
+        width: 85%;
+    }
+
+    .section__container-interfaz-input-output {
+        width: 90%;
+        gap: 45px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .header-image {
+        width: 14%;
+    }
+
+    .section {
+        width: 95%;
+    }
+
+    .section__container-interfaz-input-output {
+        gap: 40px;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+
+
+    .header-image {
+        width: 15%;
+    }
+
+    .section {
+        width: 100%;
+
+    }
+
+    .section__container-interfaz-input-output {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        margin-top: 50px;
+
+    }
+
+    .textarea-input,
+    .textarea-output {
+        font-size: 1.25rem;
+    }
+
+    .section__container-interfaz-output,
+    .section__container-interfaz-input,
+    .section__container-btn-info,
+    .section__container-interfaz-imagen {
+        width: 75%;
+    }
+
+    .container-imagen {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .header-image {
+        width: 17%;
+    }
+
+    .section__container-interfaz-output,
+    .section__container-interfaz-input,
+    .section__container-btn-info,
+    .section__container-interfaz-imagen {
+        width: 95%;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .btn-info {
+        width: 35px;
+        height: 35px;
+    }
+
+    .info-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+    .header-image {
+        width: 25%;
+    }
+
+    .buttons-input,
+    .buttons-output {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 380px) {
+
+    footer {
+        display: none;
+    }
+}

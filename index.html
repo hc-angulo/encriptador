@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="assets/logo.png" alt="Logo" class="header-image">
+        </header>
+        <main>
+            <section class="section">
+                <div class="section__container-interfaz-input-output">
+                    <div class="section__container-interfaz-input">
+                        <div class="container-textarea-input">
+                            <textarea class="textarea-input" maxlength="500" type="text" spellcheck="false"
+                                placeholder="Ingresa tu texto aquí"></textarea>
+                        </div>
+                        <div class="buttons-input">
+                            <button class="btn-encriptar" onclick="encriptar()">Encriptar</button>
+                            <button class="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
+                        </div>
+                    </div>
+                    <div id="containerInterfazOutput" class="section__container-interfaz-output-hidden">
+                        <div class="container-textarea-output">
+                            <textarea class="textarea-output" type="text" spellcheck="false" readonly></textarea>
+                        </div>
+                        <div class="buttons-output">
+                            <button class="btn-copiar">Copiar</button>
+                            <button class="btn-borrar">Borrar</button>
+                        </div>
+                    </div>
+                    <div class="section__container-interfaz-imagen">
+                        <div class="container-interfaz-imagen">
+                            <div class="container-imagen">
+                                <img src="assets/img-output.png" alt="Imagen de Inicio" class="imagen-inicio">
+                           </div>
+                            <h3>Ningún mensaje ha sido encontrado</h3>
+                            <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+                            <div class="section__container-btn-info">
+                                <button id="btnInfoInterfazInicio" class="btn-info" onclick="mostrarInformacion()">
+                                    <img src="assets/info-icon.png" alt="Información" class="info-icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="containerbtnInfo" class="section__container-btn-info-hidden">
+                    <button id="btnInfo" class="btn-info" onclick="mostrarInformacion()">
+                        <img src="assets/info-icon.png" alt="Información" class="info-icon">
+                    </button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Encriptador de Texto - By H. Angulo</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
